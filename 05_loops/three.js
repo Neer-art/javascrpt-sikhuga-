@@ -28,5 +28,12 @@ for (const key of map) { // it return the whole key value as a list format
 
 for (const [key,value] of map) { // it return the output as a key value pair 
     console.log(key, ':-', value)
-    
 }
+
+const myobject = {
+    'game1':'NFS','game2':'spiderman'
+}
+
+// for(const [key,value] of myobject) { // like python we cannot crate the myobject 
+//     console.log(key, ':-', value)    // it doesnot work with the this for of loop 
+// }
