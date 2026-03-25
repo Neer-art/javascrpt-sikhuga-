@@ -1,0 +1,31 @@
+<!-- in that we have to create a project in which when i press on the start btton then the background of the page be changes in two minute and when i press on stop then the current color be set as the background color  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+<script>
+    let interval;
+    document.getElementById('start').addEventListener('click', function(){
+        interval = setInterval(function(){
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
+        }, 2000)
+    })
+
+    document.getElementById('stop').addEventListener('click', function(){
+        clearInterval(interval)
+        console.log("interval stopped");
+    })
+</script>
+    
+</body>
+</html>
+

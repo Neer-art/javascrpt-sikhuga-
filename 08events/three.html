@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai or javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // setInterval is used to execute a function repeatedly after a specified number of milliseconds
+    // setInterval(function(){
+    //     console.log("chai is ready");
+    // }, 5000)
+
+    // another way to use setInterval is to pass a function reference instead of an anonymous function
+    // const neeraj = function(str){
+    //     console.log("neeraj ", Date.now());
+    // }
+    // const interval = setInterval(neeraj, 10000,"hi");
+
+    // quiz time i have to create a script in that when i click on the start button it will start printing neeraj is coding every 2 seconds and when i click on the stop button it will stop printing neeraj is coding  
+    let interval;
+    document.getElementById('start').addEventListener('click',function(){
+        interval = setInterval(function(){
+            console.log("neeraj is coding");
+        },2000)
+
+    })
+
+    document.getElementById('stop').addEventListener('click', function(){
+        clearInterval(interval)
+        console.log("interval stopped");
+    })  
+</script>
+</html>

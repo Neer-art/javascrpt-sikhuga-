@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai or code </h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // set timeout is used to execute a function after a specified number of milliseconds
+    setTimeout(function(){
+        alert("chai is ready")
+    }, 5000)
+
+    const neeraj = function(){
+        console.log("neeraj is coding");
+    }
+    // another way to use setTimeout is to pass a function reference instead of an anonymous function
+    setTimeout(neeraj,10000);
+
+    // suppose i want to change the content of the h1 after 3 seconds
+    const changeContent = function(){
+        document.querySelector('h1').textContent = "code is ready"
+    }
+    const clear = setTimeout(changeContent, 18000)
+
+    // suppose i want to stop the timeout before it executes then we use the clearTimeout function
+    document.getElementById('stop').addEventListener('click', function(){
+        clearTimeout(clear)
+        console.log("timeout stopped");
+    })
+</script>
+</html>
